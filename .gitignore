@@ -1,0 +1,11 @@
+.DS_Store
+.build
+.shake
+Packages
+Package.pins
+Package.resolved
+/*.xcodeproj
+credentials.json
+*.exe
+Shakefile.hs
+.test_*
