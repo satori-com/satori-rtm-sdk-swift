@@ -37,9 +37,3 @@ public func RTMEnableLogging() {
         S.loggingAlreadyEnabled = true
     }
 }
-
-public enum RTMConnectionError: Error {
-    case malformedCredentials(endpoint: String, appkey: String)
-    case protocolError(reason: String)
-    case timeout
-}

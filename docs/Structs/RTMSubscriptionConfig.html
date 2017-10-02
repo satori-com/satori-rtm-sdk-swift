@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RTMSubscriptionConfig Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/RTMSubscriptionConfig" class="dashAnchor"></a>
+
+    <a title="RTMSubscriptionConfig Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          SatoriRTM Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">SatoriRTM Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      RTMSubscriptionConfig Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/RTMClient.html">RTMClient</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RTMAuthProvider.html">RTMAuthProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RTMClientError.html">RTMClientError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RTMClientEvent.html">RTMClientEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RTMSolicitedResult.html">RTMSolicitedResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RTMSubscriptionEvent.html">RTMSubscriptionEvent</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:9SatoriRTM16RTMEnableLoggingyyF">RTMEnableLogging()</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RTMSubscriptionConfig.html">RTMSubscriptionConfig</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>RTMSubscriptionConfig</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RTMSubscriptionConfig</span></code></pre>
+
+                </div>
+              </div>
+            <p>RTMSubscriptionConfig holds the arguments for a subscription request.</p>
+
+<p>See <a href="https://www.satori.com/docs/using-satori/rtm-api#subscribe-pdu">https://www.satori.com/docs/using-satori/rtm-api#subscribe-pdu</a>.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SatoriRTM21RTMSubscriptionConfigVACSS7channel_SSSg8positionSiSg3ageAG5countSb11fastForwardSb36useLastSeenPositionWhenResubscribingtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(channel:position:age:count:fastForward:useLastSeenPositionWhenResubscribing:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SatoriRTM21RTMSubscriptionConfigVACSS7channel_SSSg8positionSiSg3ageAG5countSb11fastForwardSb36useLastSeenPositionWhenResubscribingtcfc">init(channel:position:age:count:fastForward:useLastSeenPositionWhenResubscribing:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a RTMSubscriptionConfig for a single channel subscription.
+Underlying subscription_id will be equal to given channel name.</p>
+
+<p>Position, age, count and fastForward are optional.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fastForward</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">useLastSeenPositionWhenResubscribing</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SatoriRTM21RTMSubscriptionConfigVACSS4view_SSSg8positionSiSg3ageAG5countSb11fastForwardSb36useLastSeenPositionWhenResubscribingtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(view:position:age:count:fastForward:useLastSeenPositionWhenResubscribing:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SatoriRTM21RTMSubscriptionConfigVACSS4view_SSSg8positionSiSg3ageAG5countSb11fastForwardSb36useLastSeenPositionWhenResubscribingtcfc">init(view:position:age:count:fastForward:useLastSeenPositionWhenResubscribing:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a RTMSubscriptionConfig for a view.
+Underlying subscription_id will be equal to given view string.</p>
+
+<p>Position, age, count and fastForward are optional.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fastForward</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">useLastSeenPositionWhenResubscribing</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SatoriRTM21RTMSubscriptionConfigVACSS14subscriptionId_SS4viewSSSg8positionSiSg3ageAH5countSb11fastForwardSb36useLastSeenPositionWhenResubscribingtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(subscriptionId:view:position:age:count:fastForward:useLastSeenPositionWhenResubscribing:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SatoriRTM21RTMSubscriptionConfigVACSS14subscriptionId_SS4viewSSSg8positionSiSg3ageAH5countSb11fastForwardSb36useLastSeenPositionWhenResubscribingtcfc">init(subscriptionId:view:position:age:count:fastForward:useLastSeenPositionWhenResubscribing:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a RTMSubscriptionConfig for a view with explicit subscription_id.</p>
+
+<p>Position, age, count and fastForward are optional.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">subscriptionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fastForward</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">useLastSeenPositionWhenResubscribing</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2017 <a class="link" href="https://github.com/satori-com/satori-rtm-sdk-swift" target="_blank" rel="external">Satori Worldwide Inc</a>. All rights reserved. (Last updated: 2017-10-02)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

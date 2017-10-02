@@ -27,7 +27,7 @@ func makeChannel() -> String {
 
 extension RTMClient {
     public func when_subscribed(config: RTMSubscriptionConfig, completion: @escaping () -> ()) {
-        try! subscribe(config: config) { (_, event) in
+        subscribe(config: config) { (_, event) in
             switch event {
             case .Subscribed:
                 completion()

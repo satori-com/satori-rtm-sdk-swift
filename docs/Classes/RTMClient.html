@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RTMClient Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/RTMClient" class="dashAnchor"></a>
+
+    <a title="RTMClient Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          SatoriRTM Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">SatoriRTM Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      RTMClient Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/RTMClient.html">RTMClient</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RTMAuthProvider.html">RTMAuthProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RTMClientError.html">RTMClientError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RTMClientEvent.html">RTMClientEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RTMSolicitedResult.html">RTMSolicitedResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RTMSubscriptionEvent.html">RTMSubscriptionEvent</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/s:9SatoriRTM16RTMEnableLoggingyyF">RTMEnableLogging()</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RTMSubscriptionConfig.html">RTMSubscriptionConfig</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>RTMClient</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">RTMClient</span></code></pre>
+
+                </div>
+              </div>
+            <p>RTMClient object represents a connection to Satori RTM service</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SatoriRTM9RTMClientC2onyyAC_AA0C5EventOtcF"></a>
+                    <a name="//apple_ref/swift/Method/on(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SatoriRTM9RTMClientC2onyyAC_AA0C5EventOtcF">on(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Observe client events. The callback will be called on callbackQueue</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">on</span><span class="p">(</span><span class="n">_</span> <span class="nv">observer</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">RTMClient</span><span class="p">,</span> <span class="kt"><a href="../Enums/RTMClientEvent.html">RTMClientEvent</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SatoriRTM9RTMClientCACSS8endpoint_SS6appkeyAA15RTMAuthProviderO04authG0So13DispatchQueueC08callbackJ0tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(endpoint:appkey:authProvider:callbackQueue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SatoriRTM9RTMClientCACSS8endpoint_SS6appkeyAA15RTMAuthProviderO04authG0So13DispatchQueueC08callbackJ0tcfc">init(endpoint:appkey:authProvider:callbackQueue:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Construct a new client</p>
+
+<p>All callbacks (completion blocks of RTMClient&rsquo;s methods and subscription event block) will be called on callbackQueue.
+Be sure that client code constructs and interacts with RTMClient instance in the same queue.
+Calling RTMClient methods from some other queues will likely result in a data race.
+Thread Sanitizer tool in XCode is very helpful for detecting those, don&rsquo;t hesitate to use it.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">endpoint</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">appkey</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">authProvider</span><span class="p">:</span> <span class="kt"><a href="../Enums/RTMAuthProvider.html">RTMAuthProvider</a></span> <span class="o">=</span> <span class="o">.</span><span class="kt">NoAuthProvider</span><span class="p">,</span> <span class="nv">callbackQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span> <span class="o">=</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SatoriRTM9RTMClientC5startyyF"></a>
+                    <a name="//apple_ref/swift/Method/start()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SatoriRTM9RTMClientC5startyyF">start()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start a client. To be notified about the moment when the connection is established and authentication (if any) is performed,
+use client.on() method and watch for RTMClientEvent.Connected.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">start</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SatoriRTM9RTMClientC4stopyyF"></a>
+                    <a name="//apple_ref/swift/Method/stop()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SatoriRTM9RTMClientC4stopyyF">stop()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stop the client. A stopped client can be restarted (authentication will be restored, but not subscriptions).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SatoriRTM9RTMClientC9subscribeyAA21RTMSubscriptionConfigV6config_yAC_AA0E5EventOtc02onH0tF"></a>
+                    <a name="//apple_ref/swift/Method/subscribe(config:onEvent:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SatoriRTM9RTMClientC9subscribeyAA21RTMSubscriptionConfigV6config_yAC_AA0E5EventOtc02onH0tF">subscribe(config:onEvent:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Perform rtm/subscribe request. The subscription event callback will be called on callbackQueue.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subscribe</span><span class="p">(</span>
+            <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Structs/RTMSubscriptionConfig.html">RTMSubscriptionConfig</a></span><span class="p">,</span>
+            <span class="nv">onEvent</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">RTMClient</span><span class="p">,</span> <span class="kt"><a href="../Enums/RTMSubscriptionEvent.html">RTMSubscriptionEvent</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">()</span>
+            <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SatoriRTM9RTMClientC11unsubscribeySS14subscriptionId_yAA18RTMSolicitedResultOcSg10completiontF"></a>
+                    <a name="//apple_ref/swift/Method/unsubscribe(subscriptionId:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SatoriRTM9RTMClientC11unsubscribeySS14subscriptionId_yAA18RTMSolicitedResultOcSg10completiontF">unsubscribe(subscriptionId:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Perform rtm/unsubscribe request</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribe</span><span class="p">(</span><span class="nv">subscriptionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">Callback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SatoriRTM9RTMClientC7publishySS7channel_yp7messageyAA18RTMSolicitedResultOcSg8callbacktF"></a>
+                    <a name="//apple_ref/swift/Method/publish(channel:message:callback:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SatoriRTM9RTMClientC7publishySS7channel_yp7messageyAA18RTMSolicitedResultOcSg8callbacktF">publish(channel:message:callback:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Perform rtm/publish request</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">publish</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Message</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt">Callback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SatoriRTM9RTMClientC5writeySS7channel_yp7messageyAA18RTMSolicitedResultOcSg8callbacktF"></a>
+                    <a name="//apple_ref/swift/Method/write(channel:message:callback:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SatoriRTM9RTMClientC5writeySS7channel_yp7messageyAA18RTMSolicitedResultOcSg8callbacktF">write(channel:message:callback:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Perform rtm/write request</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Message</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt">Callback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SatoriRTM9RTMClientC4readySS7channel_yAA18RTMSolicitedResultOcSg8callbacktF"></a>
+                    <a name="//apple_ref/swift/Method/read(channel:callback:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SatoriRTM9RTMClientC4readySS7channel_yAA18RTMSolicitedResultOcSg8callbacktF">read(channel:callback:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Perform rtm/read request</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">read</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt">Callback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SatoriRTM9RTMClientC6deleteySS7channel_yAA18RTMSolicitedResultOcSg8callbacktF"></a>
+                    <a name="//apple_ref/swift/Method/delete(channel:callback:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SatoriRTM9RTMClientC6deleteySS7channel_yAA18RTMSolicitedResultOcSg8callbacktF">delete(channel:callback:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Perform rtm/delete request</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt">Callback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SatoriRTM9RTMClientC4pingyyKF"></a>
+                    <a name="//apple_ref/swift/Method/ping()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SatoriRTM9RTMClientC4pingyyKF">ping()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send a websocket ping</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ping</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SatoriRTM9RTMClientC25enableAutomaticReconnectsyyF"></a>
+                    <a name="//apple_ref/swift/Method/enableAutomaticReconnects()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SatoriRTM9RTMClientC25enableAutomaticReconnectsyyF">enableAutomaticReconnects()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enable automatic reconnections after disconnects. Newly connected client
+retains authentication status but loses subscriptions. See
+<a href="https://github.com/satori-com/satori-rtm-sdk-swift/blob/master/Examples/Sources/DisconnectRecovery/main.swift">https://github.com/satori-com/satori-rtm-sdk-swift/blob/master/Examples/Sources/DisconnectRecovery/main.swift</a>
+for an example of how to resubscribe.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enableAutomaticReconnects</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2017 <a class="link" href="https://github.com/satori-com/satori-rtm-sdk-swift" target="_blank" rel="external">Satori Worldwide Inc</a>. All rights reserved. (Last updated: 2017-10-02)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

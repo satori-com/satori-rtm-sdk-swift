@@ -122,11 +122,19 @@ internal struct SubscriptionState {
     let onEvent: (RTMClient, RTMSubscriptionEvent) -> ()
 }
 
+/**
+ RTMClientEvent describes everything that might happen with a client
+ */
 public enum RTMClientEvent {
+    /// Connection to RTM was closed, error is provided if available
     case Disconnected(error: Error?)
+    /// Connection to RTM was established
     case Connected
+    /// Client received a websocket pong
     case Ponged
+    /// Connecting to RTM failed
     case FailedToConnect(error: Error)
+    /// Client received an RTM PDU with "/error" action
     case GeneralError(code: String, reason: String)
 }
 
@@ -140,6 +148,7 @@ public class RTMClient {
     var _observers = [(RTMClient, RTMClientEvent) -> ()]()
     let _queue: DispatchQueue
 
+    /// Observe client events. The callback will be called on callbackQueue
     public func on(_ observer: @escaping (RTMClient, RTMClientEvent) -> ()) {
         _observers.append(observer)
     }
@@ -253,7 +262,7 @@ public class RTMClient {
         _connection?.close()
     }
 
-    /// Perform rtm/subscribe request
+    /// Perform rtm/subscribe request. The subscription event callback will be called on callbackQueue.
     public func subscribe(
             config: RTMSubscriptionConfig,
             onEvent: @escaping (RTMClient, RTMSubscriptionEvent) -> ()

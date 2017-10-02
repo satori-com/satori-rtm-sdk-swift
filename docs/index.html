@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SatoriRTM  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="SatoriRTM  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          SatoriRTM Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">SatoriRTM Reference</a>
+      <img class="carat" src="img/carat.png" />
+      SatoriRTM  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/RTMClient.html">RTMClient</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RTMAuthProvider.html">RTMAuthProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RTMClientError.html">RTMClientError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RTMClientEvent.html">RTMClientEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RTMSolicitedResult.html">RTMSolicitedResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RTMSubscriptionEvent.html">RTMSubscriptionEvent</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:9SatoriRTM16RTMEnableLoggingyyF">RTMEnableLogging()</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/RTMSubscriptionConfig.html">RTMSubscriptionConfig</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <h2 id='swift-sdk-for-satori-rtm' class='heading'>Swift SDK for Satori RTM</h2>
+
+<p>RTM is the realtime messaging service at the core of the
+<a href="https://www.satori.com">Satori platform</a>.</p>
+
+<p>Swift SDK makes it more convenient to use Satori RTM
+from <a href="https://www.swift.org/about">Swift programming language</a>.
+Swift version 3 or 4 is required.</p>
+<h2 id='platform-compatibility' class='heading'>Platform compatibility</h2>
+
+<ul>
+<li>[x] macOS &gt;= 10.12</li>
+<li>[x] iOS &gt;= 10</li>
+</ul>
+<h2 id='running-tests' class='heading'>Running tests</h2>
+
+<p>Almost all tests are run against real Satori RTM service. The tests require
+<code>credentials.json</code> file to be populated with RTM credentials. It must include
+the following key-value pairs:</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YOUR_ENDPOINT"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"appkey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YOUR_APPKEY"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"auth_role_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YOUR_ROLE"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"auth_role_secret_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YOUR_SECRET"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"auth_restricted_channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YOUR_RESTRICTED_CHANNEL"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<ul>
+<li><code>endpoint</code> is your customer-specific DNS name for RTM access.</li>
+<li><code>appkey</code> is your application key.</li>
+<li><code>auth_role_name</code> is a role name that permits publishing / subscribing to <code>auth_restricted_channel</code>. Must be not <code>default</code>.</li>
+<li><code>auth_role_secret_key</code> is a secret key for <code>auth_role_name</code>.</li>
+<li><code>auth_restricted_channel</code> is a channel with subscribe and publish access for <code>auth_role_name</code> role only.</li>
+</ul>
+
+<p>You must use <a href="https://developer.satori.com/">Dev Portal</a> to create the role and set channel permissions.</p>
+
+<p>After setting up <code>credentials.json</code>, run SDK tests with the following commands:</p>
+<pre class="highlight shell"><code>swift <span class="nb">test</span>
+</code></pre>
+<h2 id='installation' class='heading'>Installation</h2>
+<h2 id='swift-package-manager' class='heading'>Swift Package Manager</h2>
+
+<p>Add the following dependency in your <code>Package.swift</code>:</p>
+<pre class="highlight swift"><code>    <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/satori-com/satori-rtm-sdk-swift.git"</span><span class="p">,</span> <span class="kt">Version</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)),</span>
+</code></pre>
+<h2 id='carthage' class='heading'>Carthage</h2>
+
+<p>Not available yet</p>
+<h2 id='cocoapods' class='heading'>Cocoapods</h2>
+
+<p>Example Podfile:</p>
+<pre class="highlight plaintext"><code>platform :ios, '10.0'
+use_frameworks!
+
+target 'SatoriSubscriberExample' do
+  pod 'SatoriRTM', :git =&gt; "https://github.com/satori-com/satori-rtm-sdk-swift.git"
+end
+</code></pre>
+<h2 id='getting-started' class='heading'>Getting started</h2>
+
+<p>Please find the examples in the Github repo: <a href="https://github.com/satori-com/satori-rtm-sdk-swift/tree/master/Examples">https://github.com/satori-com/satori-rtm-sdk-swift/tree/master/Examples</a></p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2017 <a class="link" href="https://github.com/satori-com/satori-rtm-sdk-swift" target="_blank" rel="external">Satori Worldwide Inc</a>. All rights reserved. (Last updated: 2017-10-02)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

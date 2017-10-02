@@ -1,6 +1,12 @@
 import Foundation
 import Starscream
 
+enum RTMConnectionError: Error {
+    case malformedCredentials(endpoint: String, appkey: String)
+    case protocolError(reason: String)
+    case timeout
+}
+
 class RTMConnection {
     let _endpoint: String
     let _appkey: String
