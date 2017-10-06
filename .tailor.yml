@@ -1,0 +1,8 @@
+except:
+- todo-syntax
+- lower-camel-case
+- constant-naming
+- parenthesis-whitespace
+- function-whitespace
+- terminating-newline
+- colon-whitespace # because tailor wants [String : String] to be [String: String], contradicting the compiler

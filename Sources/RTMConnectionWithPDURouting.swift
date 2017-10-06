@@ -1,7 +1,7 @@
 import Dispatch
 import Foundation
 
-class RTMConnectionWithPDURouting {
+internal class RTMConnectionWithPDURouting {
     let _connection: RTMConnection
     var _nextActionId: AckId = 0
     var _callbackById: [AckId : Callback] = [:]

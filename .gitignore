@@ -7,5 +7,4 @@ Package.resolved
 /*.xcodeproj
 credentials.json
 *.exe
-Shakefile.hs
 .test_*

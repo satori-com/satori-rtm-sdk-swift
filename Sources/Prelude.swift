@@ -1,4 +1,3 @@
-
 // Our internal stdlib
 
 // The SDK code uses `not` function instead of bang so that the only meaning for

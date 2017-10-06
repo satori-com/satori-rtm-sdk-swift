@@ -1,4 +1,3 @@
-
 extension RTMClient {
     /**
       Enable automatic reconnections after disconnects. Newly connected client
@@ -7,13 +6,13 @@ extension RTMClient {
       for an example of how to resubscribe.
     */
     public func enableAutomaticReconnects() {
-        self.on({ (client, event) in
+        self.on { (client, event) in
             switch event {
-                case .Disconnected(_):
+                case .Disconnected:
                     client.start()
                 default:
                     ()
             }
-        })
+        }
     }
 }

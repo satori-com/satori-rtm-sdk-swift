@@ -1,13 +1,13 @@
 import Foundation
 import Starscream
 
-enum RTMConnectionError: Error {
+internal enum RTMConnectionError: Error {
     case malformedCredentials(endpoint: String, appkey: String)
     case protocolError(reason: String)
     case timeout
 }
 
-class RTMConnection {
+internal class RTMConnection {
     let _endpoint: String
     let _appkey: String
     let _callbackQueue: DispatchQueue

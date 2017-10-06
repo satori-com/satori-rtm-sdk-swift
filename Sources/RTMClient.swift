@@ -145,7 +145,7 @@ public class RTMClient {
     let _authProvider: RTMAuthProvider
     var _connection: RTMConnectionWithPDURouting?
     var _subscriptions: [String : SubscriptionState] = [:]
-    var _observers = [(RTMClient, RTMClientEvent) -> ()]()
+    var _observers: [(RTMClient, RTMClientEvent) -> ()] = []
     let _queue: DispatchQueue
 
     /// Observe client events. The callback will be called on callbackQueue
@@ -178,7 +178,7 @@ public class RTMClient {
      use client.on() method and watch for RTMClientEvent.Connected.
      */
     public func start() {
-        let conn =  RTMConnectionWithPDURouting(endpoint: _endpoint, appkey: _appkey, callbackQueue: _queue)
+        let conn = RTMConnectionWithPDURouting(endpoint: _endpoint, appkey: _appkey, callbackQueue: _queue)
         _connection = conn
         conn.onDisconnect = {error in
             if let e = error {
@@ -365,14 +365,11 @@ public class RTMClient {
     }
 
     private func authenticate(_ role: String, _ secret: String, completion: @escaping (Error?) -> ()) {
-        let handshakeBody: [String : Any] =
-            [ "method": "role_secret"
-            , "data": ["role": role]
-            ]
+        let handshakeBody: [String : Any] = ["method": "role_secret", "data": ["role": role]]
         _connection?.action("auth/handshake", body: handshakeBody) {handshake_ack in
             guard case let .SolicitedOK(body: h_mbody) = handshake_ack
             else {
-                switch (handshake_ack) {
+                switch handshake_ack {
                     case let .SolicitedError(code: code, reason: reason):
                         completion(RTMClientError.AuthenticationFailed(reason: "auth/handshake failed, code: \(code), reason: \(reason)"))
                     default:
@@ -396,14 +393,11 @@ public class RTMClient {
 
             satorilog.debug("hash \(hash)")
 
-            let authenticateBody: [String : Any] =
-                [ "method": "role_secret"
-                , "credentials": ["hash": hash]
-                ]
+            let authenticateBody: [String : Any] = ["method": "role_secret", "credentials": ["hash": hash]]
             self._connection?.action("auth/authenticate", body: authenticateBody) {authenticate_result in
                 guard case .SolicitedOK(_) = authenticate_result
                 else {
-                    switch (authenticate_result) {
+                    switch authenticate_result {
                         case let .SolicitedError(code: code, reason: reason):
                             completion(RTMClientError.AuthenticationFailed(reason: "rtm/authenticate failed, code: \(code), reason: \(reason)"))
                         default:
@@ -432,7 +426,7 @@ internal func hmac_md5(_ string: String, _ key: String) -> String {
         CCHmacAlgorithm(kCCHmacAlgMD5),
         key, key.characters.count,
         string, string.characters.count,
-        resultBytes);
+        resultBytes)
     let resultData = Data(bytesNoCopy: resultBytes, count: digestLen, deallocator: .none)
-    return resultData.base64EncodedString(options: []);
+    return resultData.base64EncodedString(options: [])
 }
